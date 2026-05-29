@@ -1,0 +1,119 @@
+[
+  {
+    "timestamp": "2026-05-29T18:46:15",
+    "nome": "KMeans_final",
+    "algoritmo": "KMeans",
+    "parametros": {
+      "n_clusters": 2,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "metricas": {
+      "silhouette": 0.2609,
+      "davies_bouldin": 1.5705,
+      "tempo_s": 3.28
+    },
+    "observacoes": "Modelo final. k escolhido pelo máximo Silhouette em [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]."
+  },
+  {
+    "timestamp": "2026-05-29T18:49:08",
+    "nome": "KMeans_final",
+    "algoritmo": "KMeans",
+    "parametros": {
+      "n_clusters": 2,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "metricas": {
+      "silhouette": 0.2609,
+      "davies_bouldin": 1.5705,
+      "tempo_s": 3.74
+    },
+    "observacoes": "Modelo final. k escolhido pelo máximo Silhouette em [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]."
+  },
+  {
+    "timestamp": "2026-05-29T18:54:13",
+    "nome": "KMeans_final",
+    "algoritmo": "KMeans",
+    "parametros": {
+      "n_clusters": 7,
+      "n_init": 20,
+      "random_state": 42
+    },
+    "metricas": {
+      "silhouette": 0.1949,
+      "davies_bouldin": 1.3829,
+      "tempo_s": 2.6
+    },
+    "observacoes": "Modelo final. k escolhido pelo máximo Silhouette em [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]."
+  },
+  {
+    "timestamp": "2026-05-29T19:03:02",
+    "nome": "DBSCAN_eps1.5",
+    "algoritmo": "DBSCAN",
+    "parametros": {
+      "eps": 1.5,
+      "min_samples": 10
+    },
+    "metricas": {
+      "n_clusters": 6,
+      "n_noise": 649,
+      "pct_noise": 0.72,
+      "silhouette": 0.2268,
+      "davies_bouldin": 0.7941,
+      "tempo_s": 84.26
+    },
+    "observacoes": "eps definido pelo ponto de inflexão da curva k-distância (k=10)."
+  },
+  {
+    "timestamp": "2026-05-29T19:06:05",
+    "nome": "Hierarquico_Ward_k6_amostra5k",
+    "algoritmo": "AgglomerativeClustering",
+    "parametros": {
+      "n_clusters": 7,
+      "linkage": "ward",
+      "sample_size": 5000
+    },
+    "metricas": {
+      "silhouette": 0.1342,
+      "davies_bouldin": 1.6559,
+      "tempo_s": 1.29
+    },
+    "observacoes": "Executado apenas sobre amostra de 5 000 por custo computacional O(n³)."
+  },
+  {
+    "timestamp": "2026-05-29T19:08:59",
+    "nome": "Hierarquico_Ward",
+    "algoritmo": "AgglomerativeClustering",
+    "parametros": {
+      "n_clusters": 7,
+      "linkage": "ward",
+      "sample_size": 5000
+    },
+    "metricas": {
+      "silhouette": 0.1342,
+      "davies_bouldin": 1.6559,
+      "tempo_s": 1.35
+    },
+    "observacoes": "Executado apenas sobre amostra de 5 000 por custo computacional O(n³)."
+  },
+  {
+    "timestamp": "2026-05-29T19:17:24",
+    "nome": "GMM_k6",
+    "algoritmo": "GaussianMixture",
+    "parametros": {
+      "n_components": 7,
+      "covariance_type": "full",
+      "n_init": 5,
+      "random_state": 42
+    },
+    "metricas": {
+      "silhouette": -0.0357,
+      "davies_bouldin": 3.4797,
+      "bic": 976535.0,
+      "aic": 972924.0,
+      "tempo_s": 95.27
+    },
+    "observacoes": "GMM com full covariance para capturar formas elipsoidais de clusters."
+  }
+]
